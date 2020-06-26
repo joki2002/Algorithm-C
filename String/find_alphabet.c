@@ -1,10 +1,11 @@
 #include <stdio.h> 
 #include <string.h> 
+
 int main(void) 
 { 
     int arr[26], i, j; 
-
     char S[100]; 
+    
     scanf("%s", S); 
     
     for(i = 0; i <26; i++) 
@@ -19,8 +20,8 @@ int main(void)
                 arr[S[j]-'a'] = j; 
                 break; 
             } 
-        } 
-    } 
+        }
+    }
     
     for(i=0; i<26; i++) 
     { 
