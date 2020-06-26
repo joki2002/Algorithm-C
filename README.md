@@ -1,2 +1,2 @@
-# Baekjoon online judge c algorithm exam
+# Baekjoon online judge C algorithm step
 www.acmicpc.net/step
