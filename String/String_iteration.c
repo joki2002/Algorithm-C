@@ -10,7 +10,7 @@ void print(char a[], int b)
 	printf("\n"); 
 } 
 
-int main(void) 
+int main(int argc, char const *argv[])
 { 
 	int j, n; 
 	char p[21]; 
