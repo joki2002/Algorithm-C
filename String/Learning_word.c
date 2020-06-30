@@ -1,25 +1,55 @@
 #include <stdio.h>
 #include <string.h>
 
-// 소문자 - 40 = 대문자
-void print(void)
+
+int main(void)
 {
-    char arr[1000001] = { 0 };
+    int i, j, max, flag=0, result = 0;
+    char arr[1000000];
+    int cnt[26] = { 0 };
     
     scanf("%s", arr);
-    
-    for (int i = 0; i < strlen(arr); i++)   // change to upper case
+
+    for (i = 'a'; i <= 'z'; i++)
     {
-        if (arr[i] > 140)
-            arr[i] = arr - 40;
+        for (j = 0; j < strlen(arr); j++)
+        {
+           if (i == arr[j])
+               cnt[i-'a']++;
+        }
     }
 
+    for (i = 'A'; i <= 'Z'; i++)
+    {
+        for (j = 0; j < strlen(arr); j++)
+        {
+           if (i == arr[j])
+               cnt[i-'A']++;
+        }
+    }
+    
+    max = cnt[0];
 
-}
+    for (i = 1; i < 26; i++)
+    {
+        if (max < cnt[i])
+        {
+            max = cnt[i];
+            result = i;
+        }
+    }
+    
+    for (i = 0; i < 26; i++)
+    {
+        if (max == cnt[i])
+            flag++;
+    }
+    
+    if (flag > 1)
+        printf("?\n");
 
-
-int main(int argc, char const *argv[])
-{
+    else
+        printf("%c", result+'A');
     
     return 0;
 }
