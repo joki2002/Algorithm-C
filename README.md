@@ -5,7 +5,7 @@ Learning C Algorithm
 I started from 7. Function Step 😊
 
 - [x] Function
-- [ ] String
+- [x] String
 - [ ] Math1
 - [ ] Math2
 - [ ] Recursion
