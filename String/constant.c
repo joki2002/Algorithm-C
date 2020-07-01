@@ -3,7 +3,7 @@
 
 int main(int argc, char const *argv[])
 {
-    int num1, num2, i, flag = 0;
+    int num1, num2, flag = 0;
     int result[6];
     scanf("%d %d", &num1, &num2);
     
